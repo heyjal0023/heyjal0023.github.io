@@ -1,0 +1,47 @@
+p{
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    
+    .about {
+      background-color: #fefefe;
+      color: #333;
+      font-size: 18px;
+      padding: 40px;
+    }
+
+    
+    .skills {
+      background-color: #e0f7fa;
+      color: #006064;
+      font-family: "Courier New", monospace;
+      padding: 40px;
+    }
+
+    
+    .projects {
+      background-color: #fff3e0;
+      color: #e65100;
+      font-style: italic;
+      padding: 40px;
+    }
+
+    
+    .contact {
+      background-color: #ede7f6;
+      color: #4a148c;
+      font-weight: bold;
+      padding: 40px;
+    }
+
+    
+  
