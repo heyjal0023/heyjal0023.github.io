@@ -44,4 +44,12 @@ p{
     }
 
     
+    /* Project images: show at half their current displayed size */
+    .project-images img {
+      width: 50%;
+      height: 500px;
+      display: inline-block;
+      margin: 8px;
+    }
   
+
