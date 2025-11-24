@@ -30,7 +30,7 @@ p{
     /* Resume / file link styling */
     .resume-link {
       display: inline-block;
-      background: #006064;
+      background: #f20c73;
       color: #fff;
       padding: 10px 16px;
       border-radius: 6px;
@@ -60,10 +60,10 @@ p{
     }
 
     
-    /* Project images: show at half their current displayed size */
+    
     .project-images img {
-      width: 50%;
-      height: 500px;
+      width: 100px;
+      height: 100px;
       display: inline-block;
       margin: 8px;
     }
