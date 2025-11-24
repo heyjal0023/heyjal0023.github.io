@@ -62,10 +62,20 @@ p{
     
     
     .project-images img {
-      width: 500px;
-      height: 500px;
+      width: 250px; /* half of previous 500 */
+      height: 250px; /* half of previous 500 */
       display: inline-block;
       margin: 8px;
+    }
+
+    /* PDF embedded viewer in projects */
+    .project-pdf object {
+      width: 100%;
+      max-width: 960px;
+      height: 500px;
+      border: 1px solid #ccc;
+      margin: 16px 0;
+      display: block;
     }
   
 
