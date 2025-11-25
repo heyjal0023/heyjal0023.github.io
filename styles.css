@@ -59,7 +59,12 @@ p{
       padding: 40px;
     }
 
-    
+    .problem-images img {
+      width: 500px; /* half of previous 500 */
+      height: 250px; /* half of previous 500 */
+      display: inline-block;
+      margin: 8px;
+    }
     
     .project-images img {
       width: 250px; /* half of previous 500 */
