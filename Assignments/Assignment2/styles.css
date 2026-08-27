@@ -1,0 +1,59 @@
+/* General Page Styling */
+body {
+    background-color: pink;
+    font-family: Arial, sans-serif;
+    color: purple;
+}
+
+/* Containers for Main and Assignment pages */
+#box, #main-div {
+    background-color: white;
+    width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    border: 2px solid hotpink;
+}
+
+/* Headings */
+h1 {
+    color: deeppink;
+    text-align: center;
+}
+
+/* Links */
+a {
+    color: purple;
+    text-decoration: none;
+}
+
+a:hover {
+    color: deeppink;
+}
+
+/* Images */
+.my-image {
+    width: 100%;
+    max-width: 300px;
+    display: block;
+    margin: 10px auto;
+    border: 3px solid purple;
+    padding: 5px;
+    background-color: lavender;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid purple;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: plum;
+}
