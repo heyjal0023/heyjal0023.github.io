@@ -26,8 +26,8 @@ body {
 }
 
 .section-group h2 {
-    color: #2c3e50;
-    border-bottom: 2px solid #cbd5e1;
+    color: #026fdd;
+    border-bottom: 2px solid #000000;
     padding-bottom: 5px;
 }
 
@@ -40,8 +40,8 @@ body {
 
 /* Individual Cards */
 .card {
-    background-color: #ffffff;
-    border: 1px solid #cbd5e1;
+    background-color: #de9911;
+    border: 1px solid #000000;
     border-radius: 6px;
     padding: 20px;
     flex: 1 1 calc(33.333% - 20px);
@@ -54,7 +54,7 @@ body {
 
 .card h3 {
     font-size: 1.1em;
-    color: #1e293b;
+    color: #0256dd;
     margin-top: 0;
 }
 
@@ -63,13 +63,13 @@ body {
     width: 300px;
     height: 150px;
     object-fit: cover;
-    border: 1px solid #94a3b8;
+    border: 1px solid #035cd8;
     margin-bottom: 15px;
 }
 
 .card p {
     font-size: 0.9em;
-    color: #555555;
+    color: #0202e0;
     line-height: 1.4;
     margin: 0;
 }
