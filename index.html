@@ -1,32 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>CSCE 242 - Assignment Portal</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSCE 242 Portfolio - Portia Plante</title> <!-- Replace with your name if desired -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="portal">
-        <h1 id="page-title">CSCE 242: Web Applications</h1>
-        <p id="creator"><strong>The Creator:</strong> Jalen Heyward</p>
-        <p id="welcome">Welcome to my course website! This website serves as the hub for all homework assignments, projects, and labs completed throughout this semester.</p>
 
-        <div id="assignments">
+    <header id="main-header">
+        <h1>CSCE 242: Client-Server Computing</h1>
+        <p>Portia Plante</p>
+    </header>
+
+    <div id="main-container">
+        
+        <!-- Assignments Section -->
+        <section class="section-group">
             <h2>Assignments</h2>
-            <ul>
-                <li><a href="Assignments/Assignments1/index.html">Assignment 1: Topic Introduction</a></li>
-                <li><a href="Assignments/Assignment2/index.html">Assignment 2: Steven Universe</a></li>
-                <li><a href="Assignments/Assignment3/index.html">Assignment 3: Mario Kart</a></li>
-                <!-- Future assignments will go here -->
-            </ul>
-        </div>
+            <div class="flex-grid">
+                
+                <div class="card">
+                    <h3>Assignment 1 - Basic HTML</h3>
+                    <a href="assignment1.html">
+                        <img src="https://dummyimage.com/300x150/b0c4de/000000.png&text=Assignment+1" alt="Assignment 1 Preview">
+                    </a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris luctus lacus augue. Duis sed tincidunt sapien.</p>
+                </div>
 
-        <div id="projects">
+                <div class="card">
+                    <h3>Assignment 2 - Basic CSS</h3>
+                    <a href="assignment2.html">
+                        <img src="https://dummyimage.com/300x150/b0c4de/000000.png&text=Assignment+2" alt="Assignment 2 Preview">
+                    </a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris luctus lacus augue. Duis sed tincidunt sapien.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Assignment 3 - Page layout</h3>
+                    <a href="assignment3.html">
+                        <img src="https://dummyimage.com/300x150/b0c4de/000000.png&text=Assignment+3" alt="Assignment 3 Preview">
+                    </a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris luctus lacus augue. Duis sed tincidunt sapien.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="section-group">
             <h2>Projects</h2>
-            <ul>
-                <li><a href="Projects/part1/proposal%20copy.pdf">Project Proposal</a></li>
-            </ul>
-        </div>
+            <div class="flex-grid">
+                
+                <div class="card">
+                    <h3>Project Topic PDF</h3>
+                    <a href="project-topic.pdf" target="_blank">
+                        <img src="https://dummyimage.com/300x150/d8bfd8/000000.png&text=Project+Topic" alt="Project Topic Preview">
+                    </a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris luctus lacus augue. Duis sed tincidunt sapien.</p>
+                </div>
+
+            </div>
+        </section>
+
     </div>
-    
+
+    <footer id="main-footer">
+        <p>&copy; 2026 CSCE 242 Portfolio</p>
+    </footer>
+
 </body>
 </html>
