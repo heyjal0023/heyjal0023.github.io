@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 7 - Introduction to JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Assignment 7</h1>
+        <h2>Introduction to JavaScript</h2>
+    </header>
+
+    <main class="container">
+        <!-- Column 1: Speech Bubble -->
+        <section class="card" id="speech-card">
+            <h3>Speech</h3>
+            <div id="speech-container"></div>
+        </section>
+
+        <!-- Column 2: Beverage Selection -->
+        <section class="card">
+            <h3>Beverage</h3>
+            <div class="input-group">
+                <label for="beverage-select">Pick your morning beverage:</label>
+                <select id="beverage-select">
+                    <option value="" disabled selected></option>
+                    <option value="Coffee">Coffee</option>
+                    <option value="Tea">Tea</option>
+                    <option value="Orange Juice">Orange Juice</option>
+                    <option value="Milk">Milk</option>
+                </select>
+            </div>
+            <div id="beverage-result"></div>
+        </section>
+
+        <!-- Column 3: Sticker -->
+        <section class="card" id="sticker-card">
+            <h3>Add a Sticker</h3>
+            <div class="sticker-wrapper" id="sticker-wrapper">
+                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=200&auto=format&fit=crop&q=60" alt="Sun Graphic" class="sun-img" id="sun-image">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>@portiaplante.com</p>
+    </footer>
+
+    <script>
+        // Constants and arrow functions for interactive features
+        const speechCard = document.getElementById('speech-card');
+        const speechContainer = document.getElementById('speech-container');
+
+        const beverageSelect = document.getElementById('beverage-select');
+        const beverageResult = document.getElementById('beverage-result');
+
+        const stickerWrapper = document.getElementById('sticker-wrapper');
+        const sunImage = document.getElementById('sun-image');
+
+        // Speech Bubble toggle arrow function
+        const toggleSpeechBubble = (event) => {
+            // Prevent triggering if selecting elements inside
+            if (speechContainer.hasChildNodes() && speechContainer.contains(event.target)) {
+                speechContainer.innerHTML = '';
+                return;
+            }
+            speechContainer.innerHTML = `
+                <div class="speech-bubble">
+                    Hi
+                </div>
+            `;
+        };
+
+        // Beverage selection handler arrow function
+        const handleBeverageChange = (event) => {
+            const selectedValue = event.target.value;
+            if (selectedValue) {
+                beverageResult.textContent = `${selectedValue}: Nice Choice!`;
+            } else {
+                beverageResult.textContent = '';
+            }
+        };
+
+        // Sticker adder arrow function
+        const addSticker = (event) => {
+            // Prevent multiple stickers stacking endlessly on every single click if desired, or let them add
+            const existingSticker = stickerWrapper.querySelector('.emoji-sticker');
+            if (existingSticker) {
+                existingSticker.remove();
+                return;
+            }
+
+            const sticker = document.createElement('span');
+            sticker.textContent = '☀️';
+            sticker.className = 'emoji-sticker';
+            stickerWrapper.appendChild(sticker);
+        };
+
+        // Event Listeners
+        speechCard.addEventListener('click', toggleSpeechBubble);
+        beverageSelect.addEventListener('change', handleBeverageChange);
+        sunImage.addEventListener('click', addSticker);
+    </script>
+</body>
+</html>
