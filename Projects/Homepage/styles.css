@@ -3,12 +3,12 @@
     --primary: #6366F1;
     --primary-hover: #4F46E5;
     --accent: #06B6D4;
-    --text-dark: #0F172A;
-    --text-muted: #475569;
-    --bg-white: #FFFFFF;
-    --bg-light: #F8FAFC;
-    --bg-card: #FFFFFF;
-    --border-color: #E2E8F0;
+    --text-dark: #f9fafe;
+    --text-muted: #dddddd;
+    --bg-white: #07031d;
+    --bg-light: #151cd8;
+    --bg-card: #121031;
+    --border-color: #000000;
     
     --font-main: 'Inter', sans-serif;
     
