@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 8 - If Statements</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Assignment 8</h1>
+        <h2>If Statements</h2>
+
+        <!-- Navigation Menu -->
+        <div class="nav">
+            <button class="mobile-btn" onclick="toggleMenu()">Menu &#9660;</button>
+            <div class="nav-links" id="navLinks">
+                <a onclick="showExercise(1)">Exercise 1</a>
+                <span class="pipe">|</span>
+                <a onclick="showExercise(2)">Exercise 2</a>
+            </div>
+        </div>
+
+        <!-- Exercise 1 Section -->
+        <div id="exercise1" class="card">
+            <h3>Missing Class Point Deductions</h3>
+            <p>How many days do you intend to miss class?</p>
+            <input type="number" id="daysInput" min="0" max="25" oninput="calculatePoints()">
+            
+            <div class="output">
+                <div id="calcResult"></div>
+                <div class="message" id="msgResult"></div>
+            </div>
+        </div>
+
+        <!-- Exercise 2 Section -->
+        <div id="exercise2" class="card hidden">
+            <h3>End of Semester Counter</h3>
+            <div class="output">
+                <div id="semesterResult"></div>
+                <div class="message" id="semesterMsg"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleMenu() {
+            var links = document.getElementById('navLinks');
+            if (links.classList.contains('show')) {
+                links.classList.remove('show');
+            } else {
+                links.classList.add('show');
+            }
+        }
+
+        function showExercise(num) {
+            var ex1 = document.getElementById('exercise1');
+            var ex2 = document.getElementById('exercise2');
+            var links = document.getElementById('navLinks');
+
+            links.classList.remove('show');
+
+            if (num === 1) {
+                ex1.classList.remove('hidden');
+                ex2.classList.add('hidden');
+            } else {
+                ex1.classList.add('hidden');
+                ex2.classList.remove('hidden');
+                calculateSemester();
+            }
+        }
+
+        function calculatePoints() {
+            var days = document.getElementById('daysInput').value;
+            var calcResult = document.getElementById('calcResult');
+            var msgResult = document.getElementById('msgResult');
+
+            if (days === "" || isNaN(days)) {
+                calcResult.innerHTML = "";
+                msgResult.innerHTML = "";
+                return;
+            }
+
+            var numDays = parseFloat(days);
+            var percentLost = (numDays / 25) * 7;
+            
+            calcResult.innerHTML = "You will lose " + percentLost.toFixed(1) + "% for missing " + numDays + " day(s).";
+
+            var message = "";
+            if (numDays === 0) {
+                message = "Perfect attendance! Excellent job.";
+            } else if (numDays >= 1 && numDays <= 3) {
+                message = "Minor absence. Make sure to catch up on missed notes.";
+            } else if (numDays >= 4 && numDays <= 7) {
+                message = "Getting concerning. You are missing important material.";
+            } else {
+                message = "High absence rate. This will heavily impact your grade!";
+            }
+
+            msgResult.innerHTML = message;
+        }
+
+        function calculateSemester() {
+            var semesterResult = document.getElementById('semesterResult');
+            var semesterMsg = document.getElementById('semesterMsg');
+
+            var today = new Date();
+            var year = today.getFullYear();
+            var targetDate = new Date(year, 11, 4); // Dec 4
+
+            if (today > targetDate) {
+                targetDate = new Date(year + 1, 11, 4);
+            }
+
+            var diffTime = targetDate - today;
+            var diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+            semesterResult.innerHTML = "You have <strong>" + diffDays + "</strong> day(s) left in the semester.";
+
+            var message = "";
+            if (diffDays > 100) {
+                message = "Plenty of time left in the semester!";
+            } else if (diffDays >= 30 && diffDays <= 100) {
+                message = "Keep working hard, you're getting closer!";
+            } else if (diffDays >= 10 && diffDays <= 29) {
+                message = "The finish line is right around the corner!";
+            } else {
+                message = "Final stretch! You've got this!";
+            }
+
+            semesterMsg.innerHTML = message;
+        }
+
+        // Run countdown on page load
+        window.onload = function() {
+            calculateSemester();
+        };
+    </script>
+</body>
+</html>

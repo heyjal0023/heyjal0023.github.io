@@ -1,0 +1,112 @@
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f2;
+            color: #333333;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 1px solid #4a7c82;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        h1 {
+            color: #4a7c82;
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            color: #d97d75;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .nav {
+            margin-bottom: 25px;
+        }
+
+        .nav a {
+            color: #4a7c82;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 0 5px;
+        }
+
+        .nav a:hover {
+            text-decoration: underline;
+        }
+
+        .pipe {
+            color: #4a7c82;
+            margin: 0 5px;
+        }
+
+        .mobile-btn {
+            display: none;
+            background: none;
+            border: 1px solid #4a7c82;
+            color: #4a7c82;
+            padding: 5px 10px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 3px;
+            margin-bottom: 10px;
+        }
+
+        .card {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 4px;
+            margin-top: 15px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        input[type="number"] {
+            padding: 5px;
+            width: 100px;
+            text-align: center;
+            font-size: 16px;
+            border: 1px solid #4a7c82;
+            border-radius: 3px;
+        }
+
+        .output {
+            margin-top: 15px;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .message {
+            font-weight: bold;
+            color: #4a7c82;
+            margin-top: 8px;
+        }
+
+        /* Responsive Mobile Styles */
+        @media (max-width: 600px) {
+            .mobile-btn {
+                display: inline-block;
+            }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                gap: 10px;
+            }
+            .nav-links.show {
+                display: flex;
+            }
+            .pipe {
+                display: none;
+            }
+        }
