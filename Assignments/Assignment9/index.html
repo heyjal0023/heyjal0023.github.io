@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing A Road</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+
+    <div class="road-container" id="roadContainer">
+        <!-- Dashed center divider -->
+        <div class="center-line"></div>
+    </div>
+
+    <script>
+        /**
+         * A function to create and load cars with multiple parameters.
+         * color - Hex or named color for the car body.
+         *  leftPos - Horizontal percentage position on the road.
+         *  topPos - Vertical pixel offset inside the road container.
+         */
+        function spawnCar(color, leftPos, topPos, scale = 1) {
+            const roadContainer = document.getElementById('roadContainer');
+
+            // Create main car container element
+            const carElement = document.createElement('div');
+            carElement.className = 'car';
+            carElement.style.left = leftPos + '%';
+            carElement.style.top = topPos + 'px';
+            carElement.style.transform = `scale(${scale})`;
+
+            // Create car body
+            const bodyElement = document.createElement('div');
+            bodyElement.className = 'car-body';
+            bodyElement.style.backgroundColor = color;
+
+            // Create car roof/windshield
+            const roofElement = document.createElement('div');
+            roofElement.className = 'car-roof';
+
+            // Create wheels
+            const leftWheel = document.createElement('div');
+            leftWheel.className = 'wheel wheel-left';
+
+            const rightWheel = document.createElement('div');
+            rightWheel.className = 'wheel wheel-right';
+
+            // Assemble the CSS art car structure
+            bodyElement.appendChild(roofElement);
+            bodyElement.appendChild(leftWheel);
+            bodyElement.appendChild(rightWheel);
+            carElement.appendChild(bodyElement);
+
+            // Append car to the road container
+            roadContainer.appendChild(carElement);
+        }
+
+        window.onload = function() {
+            const carColors = [
+                '#0d9488', // Teal
+                '#84cc16', // Lime green
+                '#6366f1', // Indigo / Purple-blue
+                '#fb7185', // Coral / Salmon pink
+                '#312e81', // Dark navy
+                '#7dd3fc', // Light cyan blue
+                '#a855f7'  // Purple
+            ];
+
+            // Configuration for top lane and bottom lane positioning
+            // Road height is 380px. Center line is at ~190px.
+            // Top lane range roughly: 40px to 140px
+            // Bottom lane range roughly: 200px to 300px
+            const laneConfigs = [
+                { minTop: 50, maxTop: 130 },   // Top lane
+                { minTop: 210, maxTop: 290 }  // Bottom lane
+            ];
+
+            // Number of cars to generate randomly
+            const totalCars = 10;
+            
+            // Track used horizontal positions to spread out cars nicely while allowing overlaps as specified
+            for (let i = 0; i < totalCars; i++) {
+                // Pick a random color
+                const randomColor = carColors[Math.floor(Math.random() * carColors.length)];
+                
+                // Pick a random horizontal position percentage (between 5% and 90%)
+                const randomLeft = Math.floor(Math.random() * 85) + 5;
+                
+                // Randomly choose between top lane and bottom lane
+                const chosenLane = laneConfigs[Math.floor(Math.random() * laneConfigs.length)];
+                const randomTop = Math.floor(Math.random() * (chosenLane.maxTop - chosenLane.minTop + 1)) + chosenLane.minTop;
+
+                // Optional subtle scale variation for depth
+                const scaleVariation = (Math.random() * 0.15) + 0.95;
+
+                // Call the custom car loading function with multiple parameters
+                spawnCar(randomColor, randomLeft, randomTop, scaleVariation);
+            }
+        };
+    </script>
+</body>
+</html>
