@@ -314,3 +314,206 @@ ul {
         margin: 0 auto;
     }
 }
+/* Hero Preview Card Styling */
+.shortcut-preview-card {
+    background: var(--text-dark);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    color: #F8FAFC;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.25rem;
+    background: #1E293B;
+    border-bottom: 1px solid #334155;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 6px;
+}
+
+.dot.red { background: #EF4444; }
+.dot.yellow { background: #F59E0B; }
+.dot.green { background: #10B981; }
+
+.card-title {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #94A3B8;
+}
+
+.shortcut-list-preview {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.shortcut-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #1E293B;
+}
+
+.shortcut-row kbd {
+    background: #334155;
+    color: #E2E8F0;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.85rem;
+    border: 1px solid #475569;
+}
+
+/* ==========================================
+   Categories Section
+   ========================================== */
+.categories-section {
+    padding: 6rem 0;
+}
+
+.section-header {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 4rem auto;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.75rem;
+}
+
+.section-header p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.category-card {
+    background: var(--bg-white);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1.5rem;
+    border-radius: 12px;
+    transition: var(--transition);
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary);
+}
+
+.cat-icon {
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+}
+
+.category-card h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.category-card p {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+}
+
+/* ==========================================
+   Showcase Section
+   ========================================== */
+.showcase-section {
+    padding: 6rem 0;
+    background-color: var(--bg-light);
+}
+
+.showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.sheet-card {
+    background: var(--bg-white);
+    border: 1px solid var(--border-color);
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition);
+}
+
+.sheet-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+}
+
+.sheet-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+    align-self: flex-start;
+}
+
+.sheet-badge.dev { background: #EEF2FF; color: var(--primary); }
+.sheet-badge.design { background: #FDF4FF; color: #C026D3; }
+.sheet-badge.system { background: #ECFDF5; color: #059669; }
+
+.sheet-card h3 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.sheet-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+.sheet-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1.25rem;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+.link-arrow {
+    color: var(--primary);
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.link-arrow:hover {
+    color: var(--primary-hover);
+    transform: translateX(3px);
+}
