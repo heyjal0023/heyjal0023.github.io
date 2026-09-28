@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 10 - Arrays</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Assignment 10</h1>
+    <h2>Arrays</h2>
+
+    <div class="container">
+        <label for="destinationType">Pick Your Destination Type</label>
+        <select id="destinationType" onchange="handleTypeSelection()">
+            <option value="">Select</option>
+            <option value="mountains">Mountains</option>
+            <option value="beaches">Beaches</option>
+        </select>
+    </div>
+
+    <div id="linksSection" class="links-container"></div>
+
+    <div id="map-container">
+        <iframe id="mapFrame" src="" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <footer>@portiaplante.com</footer>
+
+    <script>
+        // Data Loading: Associative arrays (Objects) for Mountains and Beaches
+        const mountains = {
+            "Ashville": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d104516.4851270258!2d-82.64553205739327!3d35.59505809774659!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8859f52fda6aa7fe%3A0xb58392cf5154ee8d!2sAsheville%2C%20NC!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus",
+            "Boone": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51675.25307371948!2d-81.70823616859546!3d36.21680459585642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8850ff4a0a5b283f%3A0x863372c842750e3!2sBoone%2C%20NC!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus",
+            "Hot Springs": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.489140417934!2d-82.83398042421379!3d35.88931127252873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88597f39443c7b6f%3A0x6a2e4dc248eb3a69!2sHot%20Springs%2C%20NC%2028743!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus",
+            "Table Rock": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26577.83838379201!2d-82.7056457!3d35.0683072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x885822f361a8685b%3A0x334c44249a46f7f0!2sTable%20Rock%2C%20SC%2029671!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+        };
+
+        const beaches = {
+            "Myrtle Beach": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105658.07722744415!2d-78.96077535870956!3d33.68906038827733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x890069a842f15033%3A0x959cb31c3608be5c!2sMyrtle%20Beach%2C%20SC!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus",
+            "Miami Beach": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57329.80529323146!2d-80.16377755314055!3d25.782531652156847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d0bb20a8f49bf7%3A0x724ab2e4b3e34e26!2sMiami%20Beach%2C%20FL!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus",
+            "Outer Banks": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d102947.2625091724!2d-75.7533924559551!3d35.95995478465053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89a424268e36785b%3A0x6b4ec2b005118bf7!2sOuter%20Banks!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus",
+            "Hilton Head": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54625.3283256086!2d-80.78453075253503!3d32.216314041793836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e6c55cf1a95e1%3A0x7c73289063ec047b!2sHilton%20Head%20Island%2C%20SC!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+        };
+
+        // Arrow function handling the dropdown change event
+        const handleTypeSelection = () => {
+            const selectElement = document.getElementById("destinationType");
+            const linksSection = document.getElementById("linksSection");
+            const mapContainer = document.getElementById("map-container");
+            
+            // Ensure map stays hidden when switching categories
+            mapContainer.style.display = "none";
+            linksSection.innerHTML = "";
+
+            const selectedType = selectElement.value;
+            let currentData = null;
+
+            if (selectedType === "mountains") {
+                currentData = mountains;
+            } else if (selectedType === "beaches") {
+                currentData = beaches;
+            }
+
+            if (currentData) {
+                // Iterate through the associative array keys
+                for (let name in currentData) {
+                    if (currentData.hasOwnProperty(name)) {
+                        const link = document.createElement("a");
+                        link.href = "#";
+                        link.className = "destination-link";
+                        link.innerText = name;
+                        
+                        // Arrow function for destination click event
+                        link.onclick = (e) => {
+                            e.preventDefault();
+                            showMap(currentData[name]);
+                        };
+
+                        linksSection.appendChild(link);
+                    }
+                }
+            }
+        };
+
+        // Arrow function to display the Google Maps iframe
+        const showMap = (mapUrl) => {
+            const mapContainer = document.getElementById("map-container");
+            const mapFrame = document.getElementById("mapFrame");
+            mapFrame.src = mapUrl;
+            mapContainer.style.display = "block";
+        };
+    </script>
+</body>
+</html>

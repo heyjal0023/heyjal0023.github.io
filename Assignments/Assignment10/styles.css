@@ -1,0 +1,56 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f0;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #4a7c82;
+            margin-bottom: 5px;
+        }
+        h2 {
+            color: #e07a5f;
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+        .container {
+            margin: 20px auto;
+        }
+        select {
+            padding: 5px 10px;
+            font-size: 16px;
+            margin-left: 10px;
+        }
+        .links-container {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+        .destination-link {
+            color: #4a7c82;
+            text-decoration: underline;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .destination-link:hover {
+            color: #e07a5f;
+        }
+        #map-container {
+            margin-top: 30px;
+            display: none; /* Hidden by default until a destination is selected */
+        }
+        iframe {
+            width: 600px;
+            height: 450px;
+            border: 0;
+        }
+        footer {
+            margin-top: 50px;
+            color: #e07a5f;
+            font-size: 16px;
+        }
+    
