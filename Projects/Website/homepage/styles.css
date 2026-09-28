@@ -320,7 +320,7 @@ ul {
     border-radius: 12px;
     overflow: hidden;
     box-shadow: var(--shadow-lg);
-    color: #1a2836;
+    color: hsl(180, 100%, 100%);
 }
 
 .card-header {
