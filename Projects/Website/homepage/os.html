@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operating Systems - Keyboard Shortcuts Cheat Sheet Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html"><span class="logo-icon">⚡</span> SHORTCUT HUB</a>
+            </div>
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shortcuts.html">Development Tools</a></li>
+                    <li><a href="productivity.html">Browser & Productivity</a></li>
+                    <li><a href="design.html">Design & Media</a></li>
+                    <li><a href="os.html" class="active">Operating Systems</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="container page-section">
+        <h1 class="page-title">Operating Systems</h1>
+        <p class="page-subtitle">Essential navigation and window management shortcuts for Windows, macOS, and Linux.</p>
+
+        <div class="filter-container">
+            <input type="text" id="shortcutSearch" placeholder="Search OS shortcuts..." class="search-input">
+        </div>
+
+        <div class="shortcut-table-container">
+            <table class="shortcut-table" id="shortcutTable">
+                <thead>
+                    <tr>
+                        <th>Action</th>
+                        <th>Windows/Linux</th>
+                        <th>macOS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="shortcut-item" data-title="Take Partial Screenshot" data-desc="Opens region selection tool for custom screenshot captures.">
+                        <td>Partial Screenshot</td>
+                        <td><kbd>Win + Shift + S</kbd></td>
+                        <td><kbd>Cmd + Shift + 4</kbd></td>
+                    </tr>
+                    <tr class="shortcut-item" data-title="Lock Computer" data-desc="Instantly locks user session for security.">
+                        <td>Lock Screen</td>
+                        <td><kbd>Win + L</kbd></td>
+                        <td><kbd>Cmd + Ctrl + Q</kbd></td>
+                    </tr>
+                    <tr class="shortcut-item" data-title="Virtual Desktop Switch" data-desc="Switches across workspace desktops.">
+                        <td>Switch Virtual Desktop</td>
+                        <td><kbd>Win + Ctrl + Left/Right</kbd></td>
+                        <td><kbd>Ctrl + Left/Right</kbd></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <div id="detailModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3 id="modalTitle">Shortcut Details</h3>
+            <p id="modalDesc"></p>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <a href="index.html" class="footer-logo">⚡ KEYBOARD SHORTCUT HUB</a>
+                <p>Empowering users across Windows, macOS, and Linux system workflows.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shortcuts.html">Development Tools</a></li>
+                    <li><a href="productivity.html">Browser & Productivity</a></li>
+                    <li><a href="design.html">Design & Media</a></li>
+                    <li><a href="os.html">Operating Systems</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Keyboard Shortcuts Cheat Sheet Hub. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

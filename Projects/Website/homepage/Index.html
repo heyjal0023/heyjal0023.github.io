@@ -4,20 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Keyboard Shortcuts Cheat Sheet Hub - Home</title>
+    <!-- Google Fonts for Typography Fix -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <header class="site-header">
         <div class="container nav-container">
+            <!-- Brand Logo -->
             <div class="logo">
-                <a href="index.html">KEYBOARD SHORTCUTS CHEAT SHEET HUB</a>
+                <a href="index.html"><span class="logo-icon">⚡</span> SHORTCUT HUB</a>
             </div>
             <nav class="main-nav" id="mainNav">
                 <ul>
                     <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="shortcuts.html">Development Tools</a></li>
                     <li><a href="productivity.html">Browser & Productivity</a></li>
+                    <li><a href="design.html">Design & Media</a></li>
+                    <li><a href="os.html">Operating Systems</a></li>
                 </ul>
             </nav>
             <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
@@ -29,11 +36,43 @@
     </header>
 
     <main class="container hero-section">
-        <h1 class="hero-title">Master Your Keyboard, Boost Your Workflow.</h1>
-        <p class="hero-subtitle">The ultimate destination for fast, reliable, searchable keyboard shortcuts across development tools and productivity apps.</p>
-        <div class="hero-actions">
-            <a href="shortcuts.html" class="btn-primary">Explore Development Tools</a>
-            <a href="productivity.html" class="btn-secondary">Browser & Productivity</a>
+        <div class="hero-grid">
+            <div class="hero-text">
+                <h1 class="hero-title">Master Your Keyboard, Boost Your Workflow.</h1>
+                <p class="hero-subtitle">The ultimate destination for fast, reliable, searchable keyboard shortcuts across development tools, design apps, and operating systems.</p>
+                <div class="hero-actions">
+                    <a href="shortcuts.html" class="btn-primary">Explore Development Tools</a>
+                    <a href="productivity.html" class="btn-secondary">Browser & Productivity</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="shortcut-preview-card">
+                    <div class="card-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="card-title">VS Code Cheat Sheet</span>
+                    </div>
+                    <div class="shortcut-list-preview">
+                        <div class="shortcut-row">
+                            <span>Command Palette</span>
+                            <kbd>Ctrl + Shift + P</kbd>
+                        </div>
+                        <div class="shortcut-row">
+                            <span>Quick Open</span>
+                            <kbd>Ctrl + P</kbd>
+                        </div>
+                        <div class="shortcut-row">
+                            <span>Toggle Terminal</span>
+                            <kbd>Ctrl + `</kbd>
+                        </div>
+                        <div class="shortcut-row">
+                            <span>Multi-cursor</span>
+                            <kbd>Alt + Click</kbd>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -44,22 +83,22 @@
                 <p>Find shortcuts categorized by your favorite tools and operating systems.</p>
             </div>
             <div class="categories-grid">
-                <a href="#" class="category-card">
+                <a href="shortcuts.html" class="category-card">
                     <div class="cat-icon">💻</div>
                     <h3>Development</h3>
                     <p>VS Code, WebStorm, Git, Terminal, Docker</p>
                 </a>
-                <a href="#" class="category-card">
+                <a href="design.html" class="category-card">
                     <div class="cat-icon">🎨</div>
                     <h3>Design & Media</h3>
                     <p>Figma, Photoshop, Illustrator, Premiere</p>
                 </a>
-                <a href="#" class="category-card">
+                <a href="productivity.html" class="category-card">
                     <div class="cat-icon">📊</div>
                     <h3>Productivity</h3>
                     <p>Excel, Notion, Google Docs, Slack</p>
                 </a>
-                <a href="#" class="category-card">
+                <a href="os.html" class="category-card">
                     <div class="cat-icon">⚙️</div>
                     <h3>Operating Systems</h3>
                     <p>Windows, macOS, Linux shortcuts</p>
@@ -67,10 +106,11 @@
             </div>
         </div>
     </section>
+
     <footer class="site-footer">
         <div class="container footer-container">
             <div class="footer-col">
-                <a href="index.html" class="footer-logo">KEYBOARD SHORTCUTS CHEAT SHEET HUB</a>
+                <a href="index.html" class="footer-logo">⚡ KEYBOARD SHORTCUT HUB</a>
                 <p>Empowering developers, creators, and professionals with lightning-fast keyboard command references.</p>
             </div>
             <div class="footer-col">
@@ -79,6 +119,8 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="shortcuts.html">Development Tools</a></li>
                     <li><a href="productivity.html">Browser & Productivity</a></li>
+                    <li><a href="design.html">Design & Media</a></li>
+                    <li><a href="os.html">Operating Systems</a></li>
                 </ul>
             </div>
             <div class="footer-col">

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design & Media - Keyboard Shortcuts Cheat Sheet Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html"><span class="logo-icon">⚡</span> SHORTCUT HUB</a>
+            </div>
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shortcuts.html">Development Tools</a></li>
+                    <li><a href="productivity.html">Browser & Productivity</a></li>
+                    <li><a href="design.html" class="active">Design & Media</a></li>
+                    <li><a href="os.html">Operating Systems</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="container page-section">
+        <h1 class="page-title">Design & Media</h1>
+        <p class="page-subtitle">Master keyboard controls for Figma, Photoshop, Illustrator, and digital media tools.</p>
+
+        <div class="filter-container">
+            <input type="text" id="shortcutSearch" placeholder="Search design shortcuts..." class="search-input">
+        </div>
+
+        <div class="shortcut-table-container">
+            <table class="shortcut-table" id="shortcutTable">
+                <thead>
+                    <tr>
+                        <th>Action</th>
+                        <th>Shortcut (Windows/Linux)</th>
+                        <th>Shortcut (macOS)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="shortcut-item" data-title="Create Component (Figma)" data-desc="Turns selected element into a reusable component.">
+                        <td>Create Component (Figma)</td>
+                        <td><kbd>Ctrl + Alt + K</kbd></td>
+                        <td><kbd>Cmd + Option + K</kbd></td>
+                    </tr>
+                    <tr class="shortcut-item" data-title="Auto Layout (Figma)" data-desc="Applies responsive frame layout rules to selection.">
+                        <td>Add Auto Layout (Figma)</td>
+                        <td><kbd>Shift + A</kbd></td>
+                        <td><kbd>Shift + A</kbd></td>
+                    </tr>
+                    <tr class="shortcut-item" data-title="Duplicate Selection" data-desc="Duplicates selected layers in Photoshop/Illustrator.">
+                        <td>Duplicate Selection</td>
+                        <td><kbd>Ctrl + J</kbd></td>
+                        <td><kbd>Cmd + J</kbd></td>
+                    </tr>
+                    <tr class="shortcut-item" data-title="Export Assets" data-desc="Opens asset export dialog window.">
+                        <td>Export Assets</td>
+                        <td><kbd>Ctrl + Shift + E</kbd></td>
+                        <td><kbd>Cmd + Shift + E</kbd></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <div id="detailModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3 id="modalTitle">Shortcut Details</h3>
+            <p id="modalDesc"></p>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <a href="index.html" class="footer-logo">⚡ KEYBOARD SHORTCUT HUB</a>
+                <p>Empowering designers and media creators with fast workflow commands.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shortcuts.html">Development Tools</a></li>
+                    <li><a href="productivity.html">Browser & Productivity</a></li>
+                    <li><a href="design.html">Design & Media</a></li>
+                    <li><a href="os.html">Operating Systems</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Keyboard Shortcuts Cheat Sheet Hub. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
