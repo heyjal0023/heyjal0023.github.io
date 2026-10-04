@@ -54,7 +54,7 @@ const vacations = [
     "Beach",
     "A historic South Carolina port city known for cobble streets, pastel antebellum houses, coastal water views, and rich culinary culture.",
     "Walk along The Battery, visit Rainbow Row, explore historic Fort Sumter, enjoy local seafood at King Street restaurants.",
-    "images/charleston.jpg",
+    "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=900&q=80",
     "https://maps.google.com/maps?q=Charleston%20SC&t=&z=12&ie=UTF8&iwloc=&output=embed"
   ),
   new Vacation(
@@ -62,7 +62,7 @@ const vacations = [
     "Mountain",
     "Japan’s bustling capital blending ultramodern skyscrapers, historic shrines, vibrant street culture, and easy access to Mount Fuji.",
     "Explore Shibuya Crossing, visit Senso-ji Temple in Asakusa, take a day trip to Mount Fuji, sample authentic ramen.",
-    "images/tokyo.jpg",
+    "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=900&q=80",
     "https://maps.google.com/maps?q=Tokyo%20Japan&t=&z=10&ie=UTF8&iwloc=&output=embed"
   ),
   new Vacation(
@@ -70,7 +70,7 @@ const vacations = [
     "Mountain",
     "The cultural heart of Japan nestled among forested mountains, renowned for classical Zen gardens, bamboo groves, and historic temples.",
     "Walk through the Fushimi Inari Torii gates, stroll Arashiyama Bamboo Grove, visit Kinkaku-ji (Golden Pavilion).",
-    "images/kyoto.jpg",
+    "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=900&q=80",
     "https://maps.google.com/maps?q=Kyoto%20Japan&t=&z=11&ie=UTF8&iwloc=&output=embed"
   ),
   new Vacation(
@@ -78,7 +78,7 @@ const vacations = [
     "Beach",
     "An iconic Hawaiian island famous for its world-renowned beaches, volcanic landscapes, and scenic coastal highways.",
     "Drive the scenic Road to Hana, snorkel at Molokini Crater, watch the sunrise from Haleakala summit.",
-    "images/maui.jpg",
+    "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80",
     "https://maps.google.com/maps?q=Maui%20Hawaii&t=&z=10&ie=UTF8&iwloc=&output=embed"
   ),
   new Vacation(
@@ -86,7 +86,7 @@ const vacations = [
     "Mountain",
     "A vibrant city in North Carolina’s Blue Ridge Mountains known for historic architecture, craft breweries, and the Biltmore Estate.",
     "Tour the historic Biltmore Estate, drive along the Blue Ridge Parkway, check out downtown art galleries.",
-    "images/asheville.jpg",
+    "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=80",
     "https://maps.google.com/maps?q=Asheville%20NC&t=&z=12&ie=UTF8&iwloc=&output=embed"
   ),
   new Vacation(
@@ -94,7 +94,7 @@ const vacations = [
     "Mountain",
     "A picturesque college town high in the Blue Ridge Mountains offering outdoor adventure, skiing, and mountain hiking.",
     "Go skiing at Beech Mountain, visit Appalachian State University, hike Grandfather Mountain swinging bridge.",
-    "images/boone.jpg",
+    "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80",
     "https://maps.google.com/maps?q=Boone%20NC&t=&z=12&ie=UTF8&iwloc=&output=embed"
   ),
   new Vacation(
@@ -102,7 +102,7 @@ const vacations = [
     "Beach",
     "A quiet barrier island featuring broad sand beaches, quiet tidal creeks, and pristine coastal nature reserves.",
     "Walk to the Kindred Spirit Mailbox, stroll along the ocean fishing pier, explore Bird Island Reserve.",
-    "images/sunset-beach.jpg",
+    "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=900&q=80",
     "https://maps.google.com/maps?q=Sunset%20Beach%20NC&t=&z=12&ie=UTF8&iwloc=&output=embed"
   ),
   new Vacation(
@@ -110,7 +110,7 @@ const vacations = [
     "Beach",
     "A historic lowcountry island town known for unhurried charm, sandy shorelines, and handcrafted rope hammocks.",
     "Relax in an original rope hammock, go crabbing in the salt marsh, play golf along coastal fairways.",
-    "images/pawleys-island.jpg",
+    "https://images.unsplash.com/photo-1493558103817-58b2924bce98?auto=format&fit=crop&w=900&q=80",
     "https://maps.google.com/maps?q=Pawleys%20Island%20SC&t=&z=12&ie=UTF8&iwloc=&output=embed"
   )
 ];
