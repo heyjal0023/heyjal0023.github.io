@@ -4,19 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Browser & Productivity - Keyboard Shortcuts Cheat Sheet Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header class="site-header">
         <div class="container nav-container">
             <div class="logo">
-                <a href="Index.html">KEYBOARD SHORTCUTS CHEAT SHEET HUB</a>
+                <a href="index.html"><span class="logo-icon">⚡</span> SHORTCUT HUB</a>
             </div>
             <nav class="main-nav" id="mainNav">
                 <ul>
-                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="shortcuts.html">Development Tools</a></li>
                     <li><a href="productivity.html" class="active">Browser & Productivity</a></li>
+                    <li><a href="design.html">Design & Media</a></li>
+                    <li><a href="os.html">Operating Systems</a></li>
                 </ul>
             </nav>
             <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
@@ -30,63 +35,68 @@
     <main class="container page-section">
         <h1 class="page-title">Browser & Productivity</h1>
         <p class="page-subtitle">Speed up your daily workflow across browsers, spreadsheets, and office tools.</p>
-        
-        <div class="cards-grid">
-            <div class="card">
-                <span class="badge">FEATURED</span>
-                <h3 class="card-title">Chrome & Browsers</h3>
-                <p class="card-desc">Tabs management, address bar navigation, and DevTools.</p>
-                <a href="Index.html" class="back-link">&larr; Back to Home</a>
-            </div>
-            <div class="card">
-                <h3 class="card-title">Excel & Spreadsheets</h3>
-                <p class="card-desc">Cell navigation, formula auditing, and formatting.</p>
-            </div>
+
+        <div class="filter-container">
+            <input type="text" id="shortcutSearch" placeholder="Search productivity shortcuts..." class="search-input">
+        </div>
+
+        <div class="shortcut-table-container">
+            <table class="shortcut-table" id="shortcutTable">
+                <thead>
+                    <tr>
+                        <th>Action</th>
+                        <th>Shortcut (Windows/Linux)</th>
+                        <th>Shortcut (macOS)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="shortcut-item" data-title="Reopen Closed Tab" data-desc="Restores the most recently closed browser tab.">
+                        <td>Reopen Closed Tab</td>
+                        <td><kbd>Ctrl + Shift + T</kbd></td>
+                        <td><kbd>Cmd + Shift + T</kbd></td>
+                    </tr>
+                    <tr class="shortcut-item" data-title="Jump to Address Bar" data-desc="Highlights current URL for fast typing.">
+                        <td>Jump to Address Bar</td>
+                        <td><kbd>Ctrl + L</kbd></td>
+                        <td><kbd>Cmd + L</kbd></td>
+                    </tr>
+                    <tr class="shortcut-item" data-title="Insert Current Date (Excel)" data-desc="Inserts today's date into active cell.">
+                        <td>Insert Current Date (Excel)</td>
+                        <td><kbd>Ctrl + ;</kbd></td>
+                        <td><kbd>Cmd + ;</kbd></td>
+                    </tr>
+                    <tr class="shortcut-item" data-title="Quick Search in Notion" data-desc="Opens global search dialog in Notion.">
+                        <td>Quick Search (Notion)</td>
+                        <td><kbd>Ctrl + P</kbd></td>
+                        <td><kbd>Cmd + P</kbd></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </main>
-<div class="hero-visual">
-                <div class="shortcut-preview-card">
-                    <div class="card-header">
-                        <span class="dot red"></span>
-                        <span class="dot yellow"></span>
-                        <span class="dot green"></span>
-                        <span class="card-title">VS Code Cheat Sheet</span>
-                    </div>
-                    <div class="shortcut-list-preview">
-                        <div class="shortcut-row">
-                            <span>Command Palette</span>
-                            <kbd>Ctrl + Shift + P</kbd>
-                        </div>
-                        <div class="shortcut-row">
-                            <span>Quick Open</span>
-                            <kbd>Ctrl + P</kbd>
-                        </div>
-                        <div class="shortcut-row">
-                            <span>Toggle Terminal</span>
-                            <kbd>Ctrl + `</kbd>
-                        </div>
-                        <div class="shortcut-row">
-                            <span>Multi-cursor</span>
-                            <kbd>Alt + Click</kbd>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+    <div id="detailModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3 id="modalTitle">Shortcut Details</h3>
+            <p id="modalDesc"></p>
         </div>
-    </section>
+    </div>
 
     <footer class="site-footer">
         <div class="container footer-container">
             <div class="footer-col">
-                <a href="Index.html" class="footer-logo">KEYBOARD SHORTCUTS CHEAT SHEET HUB</a>
+                <a href="index.html" class="footer-logo">⚡ KEYBOARD SHORTCUT HUB</a>
                 <p>Empowering professionals with lightning-fast keyboard command references.</p>
             </div>
             <div class="footer-col">
                 <h4>Navigation</h4>
                 <ul>
-                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="shortcuts.html">Development Tools</a></li>
                     <li><a href="productivity.html">Browser & Productivity</a></li>
+                    <li><a href="design.html">Design & Media</a></li>
+                    <li><a href="os.html">Operating Systems</a></li>
                 </ul>
             </div>
         </div>

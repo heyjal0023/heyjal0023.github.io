@@ -1,22 +1,27 @@
-<!DOCTYPE html>
+<!DOCTYPE <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Development Tools - Keyboard Shortcuts Cheat Sheet Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header class="site-header">
         <div class="container nav-container">
             <div class="logo">
-                <a href="Index.html">KEYBOARD SHORTCUTS CHEAT SHEET HUB</a>
+                <a href="index.html"><span class="logo-icon">⚡</span> SHORTCUT HUB</a>
             </div>
             <nav class="main-nav" id="mainNav">
                 <ul>
-                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="shortcuts.html" class="active">Development Tools</a></li>
                     <li><a href="productivity.html">Browser & Productivity</a></li>
+                    <li><a href="design.html">Design & Media</a></li>
+                    <li><a href="os.html">Operating Systems</a></li>
                 </ul>
             </nav>
             <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
@@ -30,33 +35,75 @@
     <main class="container page-section">
         <h1 class="page-title">Development Tools</h1>
         <p class="page-subtitle">Essential shortcuts for VS Code, Git, Terminal, and developer environments.</p>
-        
-        <div class="cards-grid">
-            <div class="card">
-                <span class="badge">FEATURED</span>
-                <h3 class="card-title">VS Code Cheat Sheet</h3>
-                <p class="card-desc">Command palette, navigation, refactoring, and terminal shortcuts.</p>
-                <a href="Index.html" class="back-link">&larr; Back to Home</a>
-            </div>
-            <div class="card">
-                <h3 class="card-title">Terminal & Git</h3>
-                <p class="card-desc">Shell history, process control, and version control shortcuts.</p>
-            </div>
+
+        <!-- Live JS Filter Feature -->
+        <div class="filter-container">
+            <input type="text" id="shortcutSearch" placeholder="Search development shortcuts..." class="search-input">
+        </div>
+
+        <div class="shortcut-table-container">
+            <table class="shortcut-table" id="shortcutTable">
+                <thead>
+                    <tr>
+                        <th>Action</th>
+                        <th>Shortcut (Windows/Linux)</th>
+                        <th>Shortcut (macOS)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="shortcut-item" data-title="Command Palette" data-desc="Opens the global command runner in VS Code.">
+                        <td>Command Palette</td>
+                        <td><kbd>Ctrl + Shift + P</kbd></td>
+                        <td><kbd>Cmd + Shift + P</kbd></td>
+                    </tr>
+                    <tr class="shortcut-item" data-title="Quick File Open" data-desc="Search and jump directly to any file in your project.">
+                        <td>Quick File Open</td>
+                        <td><kbd>Ctrl + P</kbd></td>
+                        <td><kbd>Cmd + P</kbd></td>
+                    </tr>
+                    <tr class="shortcut-item" data-title="Toggle Integrated Terminal" data-desc="Opens or hides the built-in terminal window.">
+                        <td>Toggle Integrated Terminal</td>
+                        <td><kbd>Ctrl + `</kbd></td>
+                        <td><kbd>Cmd + `</kbd></td>
+                    </tr>
+                    <tr class="shortcut-item" data-title="Format Document" data-desc="Formats active source file according to configured style rules.">
+                        <td>Format Document</td>
+                        <td><kbd>Shift + Alt + F</kbd></td>
+                        <td><kbd>Option + Shift + F</kbd></td>
+                    </tr>
+                    <tr class="shortcut-item" data-title="Git Status Check" data-desc="Checks current working tree status in terminal.">
+                        <td>Git Status Check</td>
+                        <td><kbd>git status</kbd></td>
+                        <td><kbd>git status</kbd></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </main>
+
+    <!-- Modal for Extra JS Feature -->
+    <div id="detailModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3 id="modalTitle">Shortcut Details</h3>
+            <p id="modalDesc"></p>
+        </div>
+    </div>
 
     <footer class="site-footer">
         <div class="container footer-container">
             <div class="footer-col">
-                <a href="Index.html" class="footer-logo">KEYBOARD SHORTCUTS CHEAT SHEET HUB</a>
+                <a href="index.html" class="footer-logo">⚡ KEYBOARD SHORTCUT HUB</a>
                 <p>Empowering developers with lightning-fast keyboard command references.</p>
             </div>
             <div class="footer-col">
                 <h4>Navigation</h4>
                 <ul>
-                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="shortcuts.html">Development Tools</a></li>
                     <li><a href="productivity.html">Browser & Productivity</a></li>
+                    <li><a href="design.html">Design & Media</a></li>
+                    <li><a href="os.html">Operating Systems</a></li>
                 </ul>
             </div>
         </div>
