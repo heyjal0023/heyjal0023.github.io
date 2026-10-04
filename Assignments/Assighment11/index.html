@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vacations - Vacation Experiences</title>
+  
+  <!-- W3.CSS stylesheet for modal framework support -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="header-container">
+    <h1>Vacations</h1>
+    <h2>Vacation Experiences</h2>
+  </header>
+
+  <!-- Container where JavaScript populates vacation cards -->
+  <main id="vacation-gallery" class="gallery-grid"></main>
+
+  <!-- W3.CSS Modal Dialog -->
+  <div id="vacation-modal" class="w3-modal">
+    <div class="w3-modal-content w3-animate-zoom custom-modal-content">
+      <span id="close-modal-btn" class="close-btn">&times;</span>
+      
+      <div class="modal-body">
+        <!-- Left Side: Embedded Map -->
+        <div class="modal-map-container">
+          <iframe 
+            id="modal-map" 
+            src="" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+        <!-- Right Side: Vacation Details -->
+        <div class="modal-details">
+          <h3 id="modal-title"></h3>
+          <p><strong>Type:</strong> <span id="modal-type"></span></p>
+          <p><strong>Description:</strong> <span id="modal-description"></span></p>
+          <p><strong>Things To Do:</strong> <span id="modal-things-to-do"></span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer-container">
+    <p>@portiaplante.com</p>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="js/script.js"></script>
+</body>
+</html>
